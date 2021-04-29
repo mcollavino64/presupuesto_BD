@@ -1,0 +1,27 @@
+-- -----------------------------------------------------
+-- Table `presupuestos`.`operaciones`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `presupuestos`.`operaciones` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `cantidad` INT(11) NOT NULL,
+  `tipoGasto` VARCHAR(45) NULL DEFAULT NULL,
+  `fechaGasto` DATE NULL DEFAULT NULL,
+  `ingresoEgreso` VARCHAR(45) NULL DEFAULT NULL,
+  `presupuestos_id` INT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `presupuestos`.`presupuestos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `presupuestos`.`presupuestos` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `inicial` INT(11) NOT NULL,
+  `final` INT(11) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb4;
